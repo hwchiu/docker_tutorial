@@ -1,0 +1,16 @@
+docker version
+docker images
+docker pull nginx
+docker pull nginx:1.21.4
+docker run nginx:1.21.4
+docker run -d nginx:1.21.4
+docker run -d --name hwchiu_1 nginx:1.21.4
+docker run -d -p 8080:80 --name hwchiu_1 nginx:1.21.4
+curl localhost:8080
+docker exec hwchiu_1 id
+docker exec -it hwchiu_1 sh
+docker exec hwchiu_1 ifconfig
+docker logs hwchiu_1
+docker logs -f hwchiu_1
+curl localhost:8080
+docker logs --since=30s hwchiu_1
