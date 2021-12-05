@@ -1,0 +1,4 @@
+DOCKER_BUILDKIT=1 docker build -t hwchiu/myapp:1.0.0 .
+docker images
+docker run --name run_example hwchiu/myapp:1.0.0
+docker rm run_example

@@ -1,0 +1,8 @@
+FROM ubuntu:20.04
+
+RUN apt-get update -y
+RUN apt-get install -y nginx
+RUN apt-get install -y htop \
+        iftop
+
+ENTRYPOINT ["top", "-b"]

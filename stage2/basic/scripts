@@ -1,1 +1,4 @@
 DOCKER_BUILDKIT=1 docker build .
+docker images | grep
+docker build -t hwchiu/myapp:1.0.0 .
+docker images
