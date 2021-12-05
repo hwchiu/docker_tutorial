@@ -1,0 +1,9 @@
+DOCKER_BUILDKIT=1 docker build -t hwchiu/myapp:1.0.0 .
+docker run --rm --name run_example hwchiu/myapp:1.0.0
+curl localhost:8000/tmp
+curl localhost:8000/1
+curl localhost:8000/2
+curl localhost:8000/1.cfg
+curl localhost:8000/2.cfg
+curl localhost:8000/3
+docker exec  run_example ls -l /tmp
