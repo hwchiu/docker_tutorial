@@ -1,0 +1,3 @@
+DOCKER_BUILDKIT=1 docker build -t hwchiu/myapp:1.0.0 .
+docker run -t -p 8000:8000 --rm --name run_example hwchiu/myapp:1.0.0
+docker exec  run_example ps auxw
