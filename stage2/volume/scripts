@@ -1,0 +1,5 @@
+DOCKER_BUILDKIT=1 docker build -t hwchiu/myapp:1.0.0 .
+docker run -t -p 8000:8000 --rm --name run_example hwchiu/myapp:1.0.0
+curl localhost:8000/1.cfg
+sudo ls /var/lib/docker/volumes
+docker exec  run_example ls /mytmp
