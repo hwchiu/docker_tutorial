@@ -3,10 +3,9 @@ FROM ubuntu:20.04
 RUN apt-get update -y
 RUN apt-get install -y nginx
 RUN apt-get install -y htop \
-        iftop
+        python3
 
 EXPOSE 80/udp
-EXPOSE 80/tcp
-EXPOSE 8080/udp
+EXPOSE 8000/tcp
 
-ENTRYPOINT ["top", "-b"]
+ENTRYPOINT ["python3", "-m", "http.server"]
