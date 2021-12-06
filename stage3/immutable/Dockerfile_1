@@ -1,0 +1,16 @@
+FROM ubuntu:20.04
+
+RUN apt-get update -y
+RUN apt-get install -y nginx
+RUN apt-get install -y htop \
+        python3 \
+        python3-pip
+
+EXPOSE 80/udp
+EXPOSE 8000/tcp
+
+WORKDIR /tmp
+COPY requirements.txt .
+COPY init.sh .
+ENTRYPOINT ["/tmp/init.sh"]
+CMD ["8000"]

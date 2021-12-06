@@ -1,0 +1,10 @@
+ansible-lint
+ansible
+bcrypt
+black
+cookiecutter
+docker
+flake8
+molecule-vagrant
+molecule
+netaddr
