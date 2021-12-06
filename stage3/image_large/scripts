@@ -1,0 +1,5 @@
+docker pull python:3.7
+docker pull python:3.7-slim
+docker pull python:3.7-alpine
+
+docker images python

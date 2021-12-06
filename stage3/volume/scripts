@@ -1,0 +1,5 @@
+DOCKER_BUILDKIT=1 docker build -t hwchiu/myapp:1.0.0 .
+docker run -d -v $PWD/config1:/mytmp/config -t -p 8000:8000 --rm --name run_example hwchiu/myapp:1.0.0
+docker run -d -v $PWD/config2:/mytmp/config -t -p 8001:8000 --rm --name run_example2 hwchiu/myapp:1.0.0
+curl localhost:8000/1.cfg
+curl localhost:8001/1.cfg

@@ -1,0 +1,9 @@
+FROM hwchiu/myapp:1.0.0
+
+EXPOSE 80/udp
+EXPOSE 8000/tcp
+
+WORKDIR /
+#ENTRYPOINT "python3" "-m" "http.server"
+ENTRYPOINT ["python3", "-m", "http.server"]
+CMD ["8000"]

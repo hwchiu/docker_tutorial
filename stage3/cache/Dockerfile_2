@@ -1,0 +1,23 @@
+FROM ubuntu:20.04
+
+RUN apt-get update -y
+RUN apt-get install -y \
+    nginx \
+    htop \
+    tcpdump \
+    vim \
+    iperf3 \
+    iftop \
+    ethtool \
+    netcat \
+    iputils-ping \
+    wget \
+    curl \
+    iproute2 \
+    redis-tools \
+    telnet \
+    dnsutils
+
+EXPOSE 8000/tcp
+
+ENTRYPOINT ["python3", "-m", "http.server"]

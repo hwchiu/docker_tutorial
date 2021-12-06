@@ -1,0 +1,5 @@
+docker rmi $(docker images -q)
+docker system prune
+DOCKER_BUILDKIT=1 docker build -f Dockerfile -t hwchiu/cache:1.0.0 .
+DOCKER_BUILDKIT=1 docker build -f Dockerfile_2 -t hwchiu/cache:1.0.1 .
+DOCKER_BUILDKIT=1 docker build -f Dockerfile_3 -t hwchiu/cache:1.0.2 .
