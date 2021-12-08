@@ -1,0 +1,8 @@
+docker images hwchiu/netutils
+kubectl apply -f pod.yaml
+kubectl get pods
+kubectl exec myapp-pod pwd
+kubectl exec -it myapp-pod pwd
+kubectl logs -f myapp-pod
+kubectl delete -f pod.yaml
+docker images hwchiu/netutils

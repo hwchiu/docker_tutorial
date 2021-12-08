@@ -8,7 +8,6 @@ RUN apt-get install -y htop \
 EXPOSE 80/udp
 EXPOSE 8000/tcp
 
-WORKDIR /mytmp
 #ENTRYPOINT "python3" "-m" "http.server"
 ENTRYPOINT ["python3", "-m", "http.server"]
 CMD ["8000"]

@@ -1,0 +1,4 @@
+kubectl apply -f pod.yaml
+kubectl logs -f  myapp-pod -c test2
+kubectl exec -it myapp-pod -c test2 -- ps
+kubectl delete -f pod.yaml

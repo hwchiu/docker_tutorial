@@ -1,0 +1,7 @@
+docker images hwchiu/netutils
+kubectl apply -f pod.yaml
+kubectl describe pod
+kubectl delete -f pod.yaml
+kubectl apply -f pod.yaml
+kubectl describe pod
+kubectl delete -f pod.yaml
