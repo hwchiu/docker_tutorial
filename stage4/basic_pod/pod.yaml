@@ -5,4 +5,6 @@ metadata:
 spec:
   containers:
   - name: test
-    image: hwchiu/netutils:latest
+    image: hwchiu/netutils:python
+    ports:
+      - containerPort: 80
