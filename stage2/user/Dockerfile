@@ -12,6 +12,6 @@ ADD https://google.com /tmp/google
 ADD config.tar /tmp/
 
 RUN useradd --no-log-init -r www-user
-#USER www-user
+USER www-user
 WORKDIR /tmp
 ENTRYPOINT ["python3", "-m", "http.server"]

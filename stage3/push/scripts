@@ -3,7 +3,8 @@ docker tag hwchiu/myapp:1.0.0 hwchiu/test:1.0.0
 docker push hwchiu/test:1.0.0
 docker login
 c077df32-c217-4e74-8c0c-82ccd115c51a
-docker rmi hwchiu/test:1.0.0
+docker rmi $(docker images -q)
+docker system prune
 rm ~/.docker/config.json
 docker login
 docker pull hwchiu/test:1.0.0
